@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+set -x
+
 echo "$1"
 echo "$2"
 echo "$3"
