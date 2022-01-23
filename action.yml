@@ -1,0 +1,26 @@
+name: 'Deploy'
+description: 'Deploy Docker images to EKS'
+inputs:
+  cluster:
+    description: 'EKS cluster name'
+    required: true
+  name:
+    description: 'Deployment name'
+    required: true
+  namespace:
+    description: 'Kubernetes namespace'
+    required: true
+  image:
+    description: 'Docker image'
+    required: true
+# outputs:
+#   hostname: # id of output
+#     description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cluster }}
+    - ${{ inputs.name }}
+    - ${{ inputs.namespace }}
+    - ${{ inputs.image }}
