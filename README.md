@@ -22,9 +22,11 @@ GitHub Action for deploying Docker images to EKS
 
 ## Example usage
 
+```
 uses: droitfintech/deploy-action@v1
 with:
   cluster: 'my-cluster'
   name: 'hello-world'
   namespace: 'default'
   image: 'hello-world'
+```
