@@ -4,21 +4,25 @@ GitHub Action for deploying Docker images to EKS
 
 ## Inputs
 
-## `cluster`
+### `cluster`
 
 **Required** EKS cluster name
 
-## `name`
+### `name`
 
 **Required** Deployment name
 
-## `namespace`
+### `namespace`
 
 **Required** Kubernetes namespace
 
-## `image`
+### `image`
 
 **Required** Docker image
+
+### `zone`
+
+**Optional** If given, create Route53 CNAME in Route53 zone
 
 ## Example usage
 
