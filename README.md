@@ -20,9 +20,11 @@ GitHub Action for deploying Docker images to EKS
 
 **Required** Docker image
 
-### `zone`
+## Outputs
 
-**Optional** If given, create Route53 CNAME in Route53 zone
+### `hostname`
+
+Service hostname
 
 ## Example usage
 

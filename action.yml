@@ -13,8 +13,9 @@ inputs:
   image:
     description: 'Docker image'
     required: true
-  zone:
-    description: 'If given, create Route53 CNAME in Route53 zone'
+outputs:
+  hostname:
+    description: 'Service hostname'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -23,4 +24,3 @@ runs:
     - ${{ inputs.name }}
     - ${{ inputs.namespace }}
     - ${{ inputs.image }}
-    - ${{ inputs.zone }}
