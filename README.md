@@ -4,9 +4,9 @@ GitHub Action for deploying Docker images to EKS
 
 ## Inputs
 
-### `cluster`
+### `kubecfg`
 
-**Required** EKS cluster name
+**Required** Base64-encoded kubeconfig
 
 ### `name`
 
@@ -14,7 +14,9 @@ GitHub Action for deploying Docker images to EKS
 
 ### `namespace`
 
-**Required** Kubernetes namespace
+**Optional** Kubernetes namespace
+
+Default: _default_
 
 ### `image`
 
@@ -31,8 +33,7 @@ Service hostname
 ```
 uses: droitfintech/deploy-action@v1
 with:
-  cluster: 'my-cluster'
-  name: 'hello-world'
-  namespace: 'default'
-  image: 'hello-world'
+  kubecfg: ${{ secrets.KUBECONFIG }}
+  name: hello-world
+  image: 1234567890.dkr.ecr.us-east-1.amazonaws.com/hello-world:1.0
 ```
