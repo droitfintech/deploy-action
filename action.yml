@@ -21,7 +21,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.cluster }}
+    - ${{ inputs.kubeconfig }}
     - ${{ inputs.name }}
     - ${{ inputs.namespace }}
     - ${{ inputs.image }}
