@@ -1,7 +1,7 @@
 name: 'Deploy'
 description: 'Deploy Docker images to EKS'
 inputs:
-  kubecfg:
+  kubeconfig:
     description: 'Base64-encoded kubeconfig'
     required: true
   name:

@@ -4,7 +4,7 @@ GitHub Action for deploying Docker images to EKS
 
 ## Inputs
 
-### `kubecfg`
+### `kubeconfig`
 
 **Required** Base64-encoded kubeconfig
 
@@ -33,7 +33,7 @@ Service hostname
 ```
 uses: droitfintech/deploy-action@v1
 with:
-  kubecfg: ${{ secrets.KUBECONFIG }}
+  kubeconfig: ${{ secrets.KUBECONFIG }}
   name: hello-world
   image: 1234567890.dkr.ecr.us-east-1.amazonaws.com/hello-world:1.0
 ```
